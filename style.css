@@ -83,6 +83,11 @@ button:hover {
 .button.new {
     display: inline-block;
     margin-bottom: .8rem;
+    transition: transform 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+
+.button.new:hover {
+    transform: translateY(-5px);
 }
 
 .button.cancel {
@@ -167,6 +172,11 @@ header {
     overflow-x: auto;
 }
 
+#transaction a {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
@@ -203,6 +213,10 @@ table tbody tr:hover {
 table tbody td {
     background: white;
     padding: 1rem 2rem;
+}
+
+table tbody td img {
+    cursor: pointer;
 }
 
 td.description {
@@ -274,7 +288,7 @@ td.expense {
     margin-top: 0.8rem;
 }
 
-.input-group small {
+.input-group .help {
     opacity: 0.4;
 }
 
@@ -282,6 +296,15 @@ td.expense {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.input-group.actions .button {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.input-group.actions button {
+    /* font-size: 1rem; */
+    transition: background-color 0.2s ease-in-out;
 }
 
 .input-group.actions .button,
